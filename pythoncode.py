@@ -1,6 +1,6 @@
 import folium
 from folium.plugins import MarkerCluster
-
+from streamlit_folium import st_folium
 # Create a map centered on Italy
 m = folium.Map(location=[42.5, 12.5], zoom_start=6)
 marker_cluster = MarkerCluster().add_to(m)
@@ -173,4 +173,4 @@ for company, city in data:
         ).add_to(marker_cluster)
 
 m.save("italy_pharma_map.html")
-m
+st_folium(m, width=900, height=600)
