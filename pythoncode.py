@@ -173,4 +173,4 @@ for company, city in data:
         ).add_to(marker_cluster)
 
 m.save("italy_pharma_map.html")
-st_folium(m, width=1800, height=800)
+st_folium(m, width=1100, height=800)
